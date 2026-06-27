@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Création de votre Site Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style-portail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <form id="wizardForm">
+            <!-- STEP 1: MODEL -->
+            <div class="step-card active" data-step="1">
+                <div class="step-content" style="padding-top: 30px;">
+                    <!-- BLOC PUBLICITAIRE ALPHA ACTIVE -->
+                    <div style="margin-bottom: 20px;">
+
+                        <!-- En-tête Offre -->
+                        <div
+                            style="background: linear-gradient(135deg, #111827 0%, #1a2235 100%); border: 1px solid rgba(255,107,53,0.25); border-radius: 14px; padding: 22px 18px; position: relative; overflow: hidden; margin-bottom: 12px;">
+                            <div
+                                style="position: absolute; top: -20px; right: -20px; font-size: 130px; color: rgba(255,255,255,0.02); pointer-events: none; transform: rotate(-15deg);">
+                                <i class="fa-solid fa-gem"></i>
+                            </div>
+
+                            <div style="text-align: center; margin-bottom: 16px;">
+                                <span
+                                    style="font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; color: white; letter-spacing: -0.5px;">Alpha<span
+                                        style="color: #1B4DB3;">Active</span></span>
+                                <div
+                                    style="width: 40px; height: 3px; background: linear-gradient(to right, #ff6b35, #1B4DB3); margin: 8px auto 0 auto; border-radius: 2px;">
+                                </div>
+                            </div>
+
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+                                <div
+                                    style="background: #ff6b35; color: white; padding: 4px 10px; border-radius: 4px; font-weight: 800; font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; box-shadow: 0 2px 12px rgba(255,107,53,0.4);">
+                                    Exclusif</div>
+                                <h3
+                                    style="color: white; font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 800; margin: 0;">
+                                    Votre plateforme 100% Offerte</h3>
+                            </div>
+
+                            <p style="color: rgba(255,255,255,0.85); font-size: 12.5px; line-height: 1.65; margin: 0;">
+                                Contrairement aux agences web classiques qui facturent sur de simples promesses, nous
+                                inversons les règles : <strong style="color: #fff;">nous construisons votre site
+                                    d'abord, vous ne payez rien.</strong><br><br>
+                                Sélectionnez votre domaine ci-dessous et générez instantanément votre future plateforme
+                                d'acquisition haut de gamme, optimisée pour vous hisser dans le <strong
+                                    style="color: #ff6b35;">Top 3 Google</strong> de votre région.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step-header">
+                        <span class="step-badge">Étape 1 sur 6</span>
+                        <h2>Votre Domaine d'Expertise</h2>
+                        <p
+                            style="background-color: #ffd900; color: #000; padding: 12px; border-radius: 8px; font-weight: 600; display: block; margin-top: 10px;">
+                            Sélectionnez l'infrastructure qui correspond à votre activité pour la personnaliser.</p>
+                    </div>
+
+                    <div class="models-list">
+                        <!-- Card 1 -->
+                        <div class="model-card" onclick="selectModel('ramoneurs')">
+                            <input type="radio" name="service_type" value="ramoneurs" id="model_ramoneur"
+                                style="display:none;" required>
+                            <div class="model-img"
+                                style="background-image: url('assets/portal_images/platform_ramonerie.png');"></div>
+                            <div class="model-info">
+                                <h3>Plateforme d'acquisition : Ramonerie</h3>
+                                <p>Optimisée pour la conversion des leads en ramonage, poêles et cheminées.</p>
+                            </div>
+                            <div class="model-arrow">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="model-card" onclick="selectModel('climatiseur')">
+                            <input type="radio" name="service_type" value="climatiseur" id="model_clim"
+                                style="display:none;">
+                            <div class="model-img"
+                                style="background-image: url('assets/portal_images/platform_climatisation.png');"></div>
+                            <div class="model-info">
+                                <h3>Plateforme d'acquisition : Climatisation</h3>
+                                <p>Design haut de gamme conçu pour vendre des installations de pompes à chaleur.</p>
+                            </div>
+                            <div class="model-arrow">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="model-card" onclick="selectModel('netoyage service')">
+                            <input type="radio" name="service_type" value="netoyage service" id="model_nettoyage"
+                                style="display:none;">
+                            <div class="model-img"
+                                style="background-image: url('assets/portal_images/platform_nettoyage.png');"></div>
+                            <div class="model-info">
+                                <h3>Plateforme d'acquisition : Nettoyage</h3>
+                                <p>Plateforme orientée services professionnels pour la réservation d'entretiens divers.
+                                </p>
+                            </div>
+                            <div class="model-arrow">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="model-card" onclick="openContactModal()">
+                            <input type="radio" name="service_type" value="autre" id="model_autre"
+                                style="display:none;">
+                            <div class="model-img"
+                                style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80');">
+                            </div>
+                            <div class="model-info">
+                                <h3>Portail Client & Plateforme Sur-Mesure</h3>
+                                <p>Votre métier n'est pas dans la liste ? Contact avec nous : nous intégrons l'ensemble
+                                    de vos données dans une structure conçue 100% sur-mesure.</p>
+                            </div>
+                            <div class="model-arrow">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ce que nous faisons VRAIMENT -->
+                    <div
+                        style="background: #111827; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px; margin-bottom: 12px;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fa-solid fa-crosshairs" style="color: #ff6b35; font-size: 14px;"></i>
+                            <p
+                                style="color: white; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin: 0;">
+                                Ce que nous faisons vraiment</p>
+                        </div>
+                        <p
+                            style="color: rgba(255,255,255,0.75); font-size: 12px; line-height: 1.6; margin: 0 0 14px 0;">
+                            Nous ne réalisons pas de « jolis sites web ». <strong
+                                style="color: rgba(255,255,255,0.95);">Nous concevons des plateformes d'acquisition
+                                de clientèle.</strong> Chaque page, chaque mot-clé, chaque bouton est pensé pour une
+                            seule chose : <strong style="color: rgba(255,255,255,0.95);">remplir votre
+                                agenda.</strong>
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <div
+                                style="display: flex; align-items: flex-start; gap: 10px; background: rgba(255,255,255,0.03); border-radius: 8px; padding: 10px 12px;">
+                                <i class="fa-solid fa-magnifying-glass-chart"
+                                    style="color: #4da3ff; font-size: 13px; margin-top: 2px; min-width: 16px;"></i>
+                                <p
+                                    style="color: rgba(255,255,255,0.85); font-size: 11.5px; line-height: 1.5; margin: 0;">
+                                    <strong style="color: white;">Mots-clés stratégiques</strong> — Nous identifions
+                                    et intégrons les termes exacts que vos futurs clients tapent sur Google dans
+                                    votre zone géographique.
+                                </p>
+                            </div>
+                            <div
+                                style="display: flex; align-items: flex-start; gap: 10px; background: rgba(255,255,255,0.03); border-radius: 8px; padding: 10px 12px;">
+                                <i class="fa-solid fa-trophy"
+                                    style="color: #ff6b35; font-size: 13px; margin-top: 2px; min-width: 16px;"></i>
+                                <p
+                                    style="color: rgba(255,255,255,0.85); font-size: 11.5px; line-height: 1.5; margin: 0;">
+                                    <strong style="color: white;">Top 3 de votre région</strong> — Votre plateforme
+                                    est optimisée pour être reconnue par Google et se positionner dans les 3
+                                    premiers résultats locaux de votre département.
+                                </p>
+                            </div>
+                            <div
+                                style="display: flex; align-items: flex-start; gap: 10px; background: rgba(255,255,255,0.03); border-radius: 8px; padding: 10px 12px;">
+                                <i class="fa-solid fa-calendar-check"
+                                    style="color: #34d399; font-size: 13px; margin-top: 2px; min-width: 16px;"></i>
+                                <p
+                                    style="color: rgba(255,255,255,0.85); font-size: 11.5px; line-height: 1.5; margin: 0;">
+                                    <strong style="color: white;">Agenda rempli</strong> — Plus de prospection. Les
+                                    demandes arrivent directement via votre plateforme. Vous n'avez plus qu'à
+                                    décrocher.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pourquoi c'est gratuit -->
+                    <div
+                        style="background: linear-gradient(135deg, rgba(77,163,255,0.08), rgba(52,211,153,0.05)); border: 1px solid rgba(77,163,255,0.15); border-radius: 14px; padding: 18px; margin-bottom: 12px;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+                            <i class="fa-solid fa-hand-holding-heart" style="color: #4da3ff; font-size: 14px;"></i>
+                            <p
+                                style="color: #4da3ff; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin: 0;">
+                                Pourquoi c'est gratuit ?</p>
+                        </div>
+                        <p style="color: #ffd900; font-size: 12px; line-height: 1.6; margin: 0;">
+                            Pour propulser votre plateforme dans le Top 3 Google de votre département, Alpha Active
+                            prend à ses frais les 322€ de publication sous votre propre nom de domaine. Seul
+                            l'hébergement sécurisé reste à votre charge <span
+                                style="color: #ffffff; font-weight: 700;">(324€ en une fois)</span>. Contactez-nous pour
+                            recevoir votre plateforme gratuitement sous forme de lien à partager ou publier où vous le
+                            souhaitez. <strong style="color: #ffffff; display: block; margin-top: 6px;">Aucun frais
+                                caché, sans engagement.</strong>
+                        </p>
+                    </div>
+
+
+
+                    <!-- Comment ça marche -->
+                    <div
+                        style="background: #111827; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px; margin-bottom: 12px;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+                            <i class="fa-solid fa-route" style="color: #34d399; font-size: 14px;"></i>
+                            <p
+                                style="color: #34d399; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin: 0;">
+                                En 3 étapes simples</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div
+                                    style="min-width: 28px; height: 28px; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; color: #ff6b35;">
+                                    1</div>
+                                <p
+                                    style="color: rgba(255,255,255,0.85); font-size: 12px; line-height: 1.5; margin: 0; padding-top: 4px;">
+                                    <strong style="color: white;">Choisissez votre secteur</strong> parmi les 3
+                                    domaines ci-dessus et remplissez vos informations.
+                                </p>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div
+                                    style="min-width: 28px; height: 28px; background: rgba(77,163,255,0.15); border: 1px solid rgba(77,163,255,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; color: #4da3ff;">
+                                    2</div>
+                                <p
+                                    style="color: rgba(255,255,255,0.85); font-size: 12px; line-height: 1.5; margin: 0; padding-top: 4px;">
+                                    <strong style="color: white;">Visualisez votre plateforme</strong> générée en
+                                    temps réel avec vos données — en 2 minutes.
+                                </p>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div
+                                    style="min-width: 28px; height: 28px; background: rgba(52,211,153,0.15); border: 1px solid rgba(52,211,153,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; color: #34d399;">
+                                    3</div>
+                                <p
+                                    style="color: rgba(255,255,255,0.85); font-size: 12px; line-height: 1.5; margin: 0; padding-top: 4px;">
+                                    <strong style="color: white;">Validez depuis votre site</strong> — cliquez sur
+                                    le bouton « Contact avec nous » en haut de votre nouveau site. Quand vous nous
+                                    contactez, je la conçois sur-mesure gratuitement.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Appel gratuit + Nous contacter -->
+                    <div
+                        style="background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(255,107,53,0.02)); border: 1px solid rgba(255,107,53,0.25); border-radius: 14px; overflow: hidden; margin-bottom: 12px;">
+
+                        <!-- En-tête de la carte -->
+                        <div style="padding: 16px 18px; display: flex; align-items: center; gap: 14px;">
+                            <div
+                                style="min-width: 42px; height: 42px; background: rgba(255,107,53,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-phone" style="color: #ff6b35; font-size: 16px;"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <p
+                                    style="color: white; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 800; margin: 0 0 4px 0;">
+                                    Appel gratuit & sans engagement</p>
+                                <p
+                                    style="color: rgba(255,255,255,0.7); font-size: 11.5px; line-height: 1.5; margin: 0 0 10px 0;">
+                                    Votre conseiller commercial <strong style="color: rgba(255,255,255,0.95);">Ali
+                                        Bentayeb</strong> est disponible pour répondre à toutes vos questions et vous
+                                    accompagner personnellement.</p>
+                                <!-- Bouton toggle -->
+                                <button type="button" onclick="toggleContact()" id="contactToggleBtn"
+                                    style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,107,53,0.18); border: 1px solid rgba(255,107,53,0.35); border-radius: 8px; color: #ff6b35; font-size: 11.5px; font-weight: 700; font-family: 'Montserrat', sans-serif; padding: 7px 14px; cursor: pointer; transition: all 0.2s;">
+                                    <i class="fa-solid fa-paper-plane" style="font-size: 11px;"></i>
+                                    Nous contacter
+                                    <i id="contactToggleIcon" class="fa-solid fa-chevron-down"
+                                        style="font-size: 10px; transition: transform 0.3s;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Options de contact (dépliables) -->
+                        <div id="contactOptions"
+                            style="display: none; border-top: 1px solid rgba(255,107,53,0.15); flex-direction: column; gap: 0;">
+
+                            <!-- Téléphone -->
+                            <a href="tel:+33602706546"
+                                style="text-decoration: none; display: flex; align-items: center; gap: 14px; padding: 13px 18px; border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.2s;"
+                                onmouseover="this.style.background='rgba(255,255,255,0.04)'"
+                                onmouseout="this.style.background='transparent'">
+                                <div
+                                    style="min-width: 36px; height: 36px; background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-solid fa-phone" style="color: #34d399; font-size: 13px;"></i>
+                                </div>
+                                <div>
+                                    <p style="color: white; font-size: 12px; font-weight: 600; margin: 0 0 2px 0;">Appel
+                                        téléphonique</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 11px; margin: 0;">06 02 70 65 46
+                                    </p>
+                                </div>
+                                <i class="fa-solid fa-chevron-right"
+                                    style="color: rgba(255,255,255,0.2); font-size: 11px; margin-left: auto;"></i>
+                            </a>
+
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/33602706546" target="_blank"
+                                style="text-decoration: none; display: flex; align-items: center; gap: 14px; padding: 13px 18px; border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.2s;"
+                                onmouseover="this.style.background='rgba(255,255,255,0.04)'"
+                                onmouseout="this.style.background='transparent'">
+                                <div
+                                    style="min-width: 36px; height: 36px; background: rgba(37,211,102,0.12); border: 1px solid rgba(37,211,102,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-brands fa-whatsapp" style="color: #25d366; font-size: 15px;"></i>
+                                </div>
+                                <div>
+                                    <p style="color: white; font-size: 12px; font-weight: 600; margin: 0 0 2px 0;">
+                                        WhatsApp</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 11px; margin: 0;">Message
+                                        instantané</p>
+                                </div>
+                                <i class="fa-solid fa-chevron-right"
+                                    style="color: rgba(255,255,255,0.2); font-size: 11px; margin-left: auto;"></i>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:ali@alpha-active-conseil.com"
+                                style="text-decoration: none; display: flex; align-items: center; gap: 14px; padding: 13px 18px; border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.2s;"
+                                onmouseover="this.style.background='rgba(255,255,255,0.04)'"
+                                onmouseout="this.style.background='transparent'">
+                                <div
+                                    style="min-width: 36px; height: 36px; background: rgba(77,163,255,0.12); border: 1px solid rgba(77,163,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-solid fa-envelope" style="color: #4da3ff; font-size: 13px;"></i>
+                                </div>
+                                <div>
+                                    <p style="color: white; font-size: 12px; font-weight: 600; margin: 0 0 2px 0;">Email
+                                    </p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 11px; margin: 0;">
+                                        ali@alpha-active-conseil.com</p>
+                                </div>
+                                <i class="fa-solid fa-chevron-right"
+                                    style="color: rgba(255,255,255,0.2); font-size: 11px; margin-left: auto;"></i>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="https://instagram.com/alphaactive.conseil" target="_blank"
+                                style="text-decoration: none; display: flex; align-items: center; gap: 14px; padding: 13px 18px; transition: background 0.2s;"
+                                onmouseover="this.style.background='rgba(255,255,255,0.04)'"
+                                onmouseout="this.style.background='transparent'">
+                                <div
+                                    style="min-width: 36px; height: 36px; background: rgba(225,48,108,0.12); border: 1px solid rgba(225,48,108,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-brands fa-instagram" style="color: #e1306c; font-size: 15px;"></i>
+                                </div>
+                                <div>
+                                    <p style="color: white; font-size: 12px; font-weight: 600; margin: 0 0 2px 0;">
+                                        Instagram</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 11px; margin: 0;">
+                                        @alphaactive.conseil</p>
+                                </div>
+                                <i class="fa-solid fa-chevron-right"
+                                    style="color: rgba(255,255,255,0.2); font-size: 11px; margin-left: auto;"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+
+                </div><!-- end step-content scrollable area -->
+
+                <!-- Footer Alpha Active -->
+                <div id="portalFooter"
+                    style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; width: 100%; box-sizing: border-box;">
+                    <p
+                        style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 800; color: white; margin-bottom: 6px;">
+                        Alpha<span style="color: #1B4DB3;">Active</span>
+                    </p>
+                    <p style="color: rgba(255,255,255,0.3); font-size: 10px; margin-bottom: 12px;">
+                        &copy; 2026 — Tous droits réservés.
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 15px; font-size: 11px;">
+                        <a href="https://alpha-active-conseil.com/#manifeste" target="_blank"
+                            style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='white'"
+                            onmouseout="this.style.color='rgba(255,255,255,0.5)'">Manifeste</a>
+                        <a href="https://alpha-active-conseil.com/#osez-ia" target="_blank"
+                            style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='white'"
+                            onmouseout="this.style.color='rgba(255,255,255,0.5)'">Osez l'IA</a>
+                        <a href="https://alpha-active-conseil.com/#poles" target="_blank"
+                            style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='white'"
+                            onmouseout="this.style.color='rgba(255,255,255,0.5)'">Services</a>
+                        <a href="https://alpha-active-conseil.com/pourquoi.html" target="_blank"
+                            style="color: #ffd900; text-decoration: none; font-weight: 600;">Pourquoi nous</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- STEP 2: IDENTITY -->
+    <div class="step-card" data-step="2">
+        <div class="step-image"
+            style="background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80');">
+        </div>
+        <div class="step-content">
+            <button type="button" class="btn-back" onclick="prevStep(2)"><i class="fa-solid fa-arrow-left"></i>
+                Retour</button>
+            <div class="step-header">
+                <span class="step-badge">Étape 2 sur 6</span>
+                <h2>L'Identité de votre Marque</h2>
+                <p>Quel est le nom de votre entreprise ? <br><i>Cela modifiera le nom affiché dans l'onglet de
+                        votre navigateur web et remplacera toutes les mentions textuelles au cœur du site.</i>
+                </p>
+            </div>
+            <div class="input-group">
+                <label for="site_title"><i class="fa-solid fa-heading"></i> Nom de l'entreprise</label>
+                <input type="text" id="site_title" name="site_title" placeholder="Ex: Jean Expert Artisan" required>
+            </div>
+            <button type="button" class="btn-next" onclick="nextStep(2)">Continuer <i
+                    class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <!-- STEP 3: LOGO -->
+    <div class="step-card" data-step="3">
+        <div class="step-image"
+            style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80');">
+        </div>
+        <div class="step-content">
+            <button type="button" class="btn-back" onclick="prevStep(3)"><i class="fa-solid fa-arrow-left"></i>
+                Retour</button>
+            <div class="step-header">
+                <span class="step-badge">Étape 3 sur 6</span>
+                <h2>Un Logo Mémorable</h2>
+                <p>Séparez votre marque en deux lignes pour créer un impact visuel fort. <br><i>Ces deux textes
+                        remplaceront le logo textuel visible tout en haut à gauche dans la barre de navigation
+                        du site.</i></p>
+            </div>
+            <div class="input-group">
+                <label for="logo_text1"><i class="fa-solid fa-font"></i> Pseudo principal de l'entreprise</label>
+                <input type="text" id="logo_text1" name="logo_text1" placeholder="Ex: DUPONT" minlength="5" required>
+            </div>
+            <div class="input-group">
+                <label for="logo_text2"><i class="fa-solid fa-pen-nib"></i> Texte Secondaire (Ligne 2)</label>
+                <input type="text" id="logo_text2" name="logo_text2" placeholder="Ex: ARTISAN" minlength="5" required>
+            </div>
+            <button type="button" class="btn-next" onclick="nextStep(3)">Continuer <i
+                    class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <!-- STEP 4: CONTACT -->
+    <div class="step-card" data-step="4">
+        <div class="step-image"
+            style="background-image: url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=800&q=80');">
+        </div>
+        <div class="step-content">
+            <button type="button" class="btn-back" onclick="prevStep(4)"><i class="fa-solid fa-arrow-left"></i>
+                Retour</button>
+            <div class="step-header">
+                <span class="step-badge">Étape 4 sur 6</span>
+                <h2>Vos Coordonnées de Contact</h2>
+                <p>Comment vos futurs clients peuvent-ils vous joindre ? <br><i>Ces informations seront affichées sur
+                        votre plateforme.</i></p>
+            </div>
+            <div class="input-group">
+                <label for="phone"><i class="fa-solid fa-phone"></i> Numéro de téléphone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ex: 06 12 34 56 78" required>
+            </div>
+            <div class="input-group">
+                <label for="email"><i class="fa-solid fa-envelope"></i> Adresse Email</label>
+                <input type="email" id="email" name="email" placeholder="Ex: contact@mon-entreprise.fr" required>
+            </div>
+            <button type="button" class="btn-next" onclick="nextStep(4)">Continuer <i
+                    class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <!-- STEP 5: LOCATION -->
+    <div class="step-card" data-step="5">
+        <div class="step-image"
+            style="background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80');">
+        </div>
+        <div class="step-content">
+            <button type="button" class="btn-back" onclick="prevStep(5)"><i class="fa-solid fa-arrow-left"></i>
+                Retour</button>
+            <div class="step-header">
+                <span class="step-badge">Étape 5 sur 6</span>
+                <h2>Votre Zone d'Intervention</h2>
+                <p>Définissez votre localisation précise. <br><i>Cela mettra à jour dynamiquement la carte
+                        interactive Google Maps au milieu de la page, ainsi que l'adresse affichée dans la
+                        section Contact de votre site.</i></p>
+            </div>
+            <div class="input-group">
+                <label for="address"><i class="fa-solid fa-map-location-dot"></i> Adresse Complète</label>
+                <input type="text" id="address" name="address" placeholder="Ex: 12 Avenue des Champs, 75008 Paris"
+                    minlength="5" required>
+            </div>
+            <div class="input-group" style="display: flex; gap: 15px;">
+                <div style="flex: 1;">
+                    <label for="zipcode"><i class="fa-solid fa-hashtag"></i> Département</label>
+                    <input type="text" id="zipcode" name="zipcode" placeholder="Ex: 75" required>
+                </div>
+                <div style="flex: 2;">
+                    <label for="city"><i class="fa-solid fa-city"></i> Ville Principale</label>
+                    <input type="text" id="city" name="city" placeholder="Ex: Paris" required>
+                </div>
+            </div>
+
+            <button type="button" class="btn-next" onclick="nextStep(5)">Continuer <i
+                    class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <!-- STEP 6: PRO INFO -->
+    <div class="step-card" data-step="6">
+        <div class="step-image"
+            style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80');">
+        </div>
+        <div class="step-content">
+            <button type="button" class="btn-back" onclick="prevStep(6)"><i class="fa-solid fa-arrow-left"></i>
+                Retour</button>
+            <div class="step-header">
+                <span class="step-badge">Étape 6 sur 6</span>
+                <h2>Votre Activité</h2>
+                <p>Ces dernières informations nous permettent de calibrer la stratégie d'acquisition de votre
+                    plateforme.</p>
+            </div>
+
+            <div class="input-group">
+                <label for="capacity"><i class="fa-solid fa-calendar-check"></i> Combien de chantiers êtes-vous capable
+                    de faire par mois ?</label>
+                <select id="capacity" name="capacity" required>
+                    <option value="" disabled selected>Sélectionnez un nombre...</option>
+                    <option value="1-2">1 à 2 chantiers</option>
+                    <option value="3-5">3 à 5 chantiers</option>
+                    <option value="6-10">6 à 10 chantiers</option>
+                    <option value="10+">Plus de 10 chantiers</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="objective"><i class="fa-solid fa-bullseye"></i> Objectif principal cette année
+                    ?</label>
+                <select id="objective" name="objective" required>
+                    <option value="" disabled selected>Sélectionnez un objectif...</option>
+                    <option value="visibility">Développer ma visibilité locale</option>
+                    <option value="leads">Augmenter mon nombre de prospects (leads)</option>
+                    <option value="image">Professionnaliser mon image de marque</option>
+                    <option value="automation">Gagner du temps via l'automatisation</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Générer Mon Site
+            </button>
+        </div>
+    </div>
+    </form>
+
+    <!-- ÉCRAN DE CHARGEMENT FINAL -->
+    <div id="loadingOverlay"
+        style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #0f172a; z-index: 1000; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; overflow: hidden;">
+
+        <!-- Image de fond animée -->
+        <div id="loadingBgImage"
+            style="position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.2; z-index: 0; transition: background-image 0.8s ease-in-out;">
+        </div>
+
+        <div
+            style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 100%;">
+            <i class="fa-solid fa-circle-notch fa-spin"
+                style="font-size: 50px; color: #4da3ff; margin-bottom: 25px;"></i>
+            <h2
+                style="font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 15px; color: white;">
+                Génération de votre plateforme en cours...</h2>
+            <p style="color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.5; margin-bottom: 35px;">Nous
+                intégrons <span id="loadName" style="color: white; font-weight: 600;"></span> dans le design premium
+                de <span id="loadModel" style="color: white; font-weight: 600;"></span>.</p>
+
+            <div id="loadingSlideContainer"
+                style="background: rgba(27, 77, 179, 0.15); border-left: 4px solid #1B4DB3; padding: 25px; border-radius: 8px; max-width: 600px; text-align: left; border: 1px solid rgba(27, 77, 179, 0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.4); transition: opacity 0.4s ease; backdrop-filter: blur(5px);">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                    <i id="loadingSlideIcon" class="fa-solid fa-gift" style="color: #4da3ff; font-size: 20px;"></i>
+                    <span id="loadingSlideTitle"
+                        style="font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #4da3ff;">L'Initiative
+                        Alpha Sans Condition</span>
+                </div>
+                <p id="loadingSlideSubtitle"
+                    style="font-size: 16px; color: white; line-height: 1.6; margin: 0 0 12px 0; font-weight: 600;">
+                    🔥 OFFRE EXCLUSIVE : Votre site internet est <span
+                        style="color: #4da3ff; text-transform: uppercase;">donné intégralement</span> et <span
+                        style="text-decoration: underline; text-decoration-color: #4da3ff; text-underline-offset: 4px;">100%
+                        gratuitement</span>.
+                </p>
+                <p id="loadingSlideDesc"
+                    style="font-size: 14.5px; color: rgba(255,255,255,0.85); margin: 0; font-weight: 400; line-height: 1.6;">
+                    Nous créons l'architecture entière <strong>sans la moindre obligation de votre part</strong>.
+                    Aucun frais de création, vous ne prenez aucun risque. Vous allez visualiser immédiatement
+                    l'impact de notre design avec les informations de votre entreprise.
+                </p>
+                <div id="loadingSlideExtra" style="width: 100%; display: none;"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+        const totalSteps = 6;
+
+        function toggleContact() {
+            const panel = document.getElementById('contactOptions');
+            const icon = document.getElementById('contactToggleIcon');
+            const isOpen = panel.style.display === 'flex';
+            panel.style.display = isOpen ? 'none' : 'flex';
+            panel.style.flexDirection = 'column';
+            icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+
+
+        function updateProgress(step) {
+            const progress = (step / totalSteps) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function validateStep(step) {
+            const currentCard = document.querySelector(`.step-card[data-step="${step}"]`);
+            const inputs = currentCard.querySelectorAll('input, select');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    input.reportValidity();
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
+
+        function nextStep(currentStep) {
+            if (!validateStep(currentStep)) return;
+
+            const currentCard = document.querySelector(`.step-card[data-step="${currentStep}"]`);
+            const nextCard = document.querySelector(`.step-card[data-step="${currentStep + 1}"]`);
+
+            currentCard.classList.remove('active');
+            currentCard.classList.add('slide-out-left');
+
+            nextCard.classList.remove('slide-out-right', 'slide-out-left');
+            nextCard.classList.add('active');
+
+            updateProgress(currentStep + 1);
+        }
+
+        function prevStep(currentStep) {
+            const currentCard = document.querySelector(`.step-card[data-step="${currentStep}"]`);
+            const prevCard = document.querySelector(`.step-card[data-step="${currentStep - 1}"]`);
+
+            currentCard.classList.remove('active');
+            currentCard.classList.add('slide-out-right');
+
+            prevCard.classList.remove('slide-out-left', 'slide-out-right');
+            prevCard.classList.add('active');
+
+            updateProgress(currentStep - 1);
+        }
+
+        document.getElementById('wizardForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const params = new URLSearchParams();
+
+            let serviceFolder = "ramoneurs";
+            let companyName = "votre entreprise";
+
+            for (const [key, value] of formData.entries()) {
+                if (key === 'service_type') {
+                    serviceFolder = value;
+                } else {
+                    params.append(key, value);
+                    if (key === 'site_title') companyName = value;
+                }
+            }
+
+            // Afficher le nom dans l'écran de chargement
+            document.getElementById('loadName').textContent = companyName;
+            document.getElementById('loadModel').textContent = serviceFolder.replace('_', ' ').toUpperCase();
+
+            // Configuration des slides
+            const slides = [
+                {
+                    icon: "fa-gift", color: "#4da3ff", border: "#1B4DB3", bg: "rgba(27, 77, 179, 0.25)",
+                    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+                    title: "L'Initiative Alpha Sans Condition",
+                    subtitle: "🔥 OFFRE EXCLUSIVE : Votre plateforme est <span style='color: #4da3ff; text-transform: uppercase;'>offerte intégralement</span> et <span style='text-decoration: underline; text-decoration-color: #4da3ff; text-underline-offset: 4px;'>100% gratuitement</span>.",
+                    desc: "Nous créons l'architecture entière sans aucune obligation. <strong>Pour l'obtenir définitivement, il vous suffira de nous contacter via le bouton en haut de votre site.</strong>",
+                    extraHtml: `<div style="margin-top: 15px; padding: 15px 20px; background: #111827; border-bottom: 4px solid #FF6B35; border-radius: 6px; display: flex; align-items: center; justify-content: space-between;">
+                        <div style="color: white; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 15px; line-height: 1.3;">
+                            Ceci est un aperçu de votre<br>futur site.
+                        </div>
+                        <div style="position: relative;">
+                            <div style="background: #FF6B35; color: white; font-size: 14px; font-family: 'Inter', sans-serif; font-weight: 700; padding: 10px 18px; border-radius: 6px; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);">
+                                Contact avec nous
+                            </div>
+                            <div style="position: absolute; top: 120%; left: 50%; transform: translateX(-50%); color: #FF6B35; font-size: 22px; animation: bounceUp 1.5s infinite;">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </div>
+                            <div style="position: absolute; top: 230%; left: 50%; transform: translateX(-50%); color: #FF6B35; font-size: 13px; width: 220px; text-align: center; font-weight: 700;">Cliquez sur ce bouton <br>pour finaliser l'offre !</div>
+                        </div>
+                    </div>
+                    <style>
+                        @keyframes bounceUp {
+                            0%, 100% { transform: translate(-50%, 0); }
+                            50% { transform: translate(-50%, -8px); }
+                        }
+                    </style>`
+                },
+                {
+                    icon: "fa-rocket", color: "#00E676", border: "#00A650", bg: "rgba(0, 166, 80, 0.2)",
+                    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+                    title: "TRAFIC & VISIBILITÉ : Obsession SEO & Data",
+                    subtitle: "Objectif : Le Top 3 sur Google dans votre région.",
+                    desc: "Un site sans rentabilité n'est qu'une dépense. Nous concevons le code de votre plateforme avec un balisage sémantique avancé et un temps de chargement éclair pour dominer le référencement naturel local dès son lancement. L'objectif : écraser la concurrence locale et capturer vos leads.",
+                    extraHtml: `<div style="margin-top: 15px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); font-family: Arial, sans-serif; text-align: left; border-left: 4px solid #4da3ff;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                            <div style="width: 28px; height: 28px; background: #1a0dab; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 14px;" id="seoMockupLetter">
+                                A
+                            </div>
+                            <div>
+                                <div style="font-size: 13px; color: #202124; font-weight: 400;" id="seoMockupTitle">Votre Entreprise</div>
+                                <div style="font-size: 11px; color: #4d5156;">https://www.votre-futur-site.com</div>
+                            </div>
+                        </div>
+                        <div style="color: #1a0dab; font-size: 17px; font-weight: 400; margin-bottom: 4px;">
+                            <span id="seoMockupLink">Votre Entreprise</span> : Le N°1 de votre région
+                        </div>
+                        <div style="color: #4d5156; font-size: 13px; line-height: 1.4;">
+                            <strong style="color: #70757a;">Top 3 des résultats</strong> · Votre plateforme digitale sur-mesure propulsée pour écraser la concurrence locale et capturer vos leads...
+                        </div>
+                    </div>`
+                },
+                {
+                    icon: "fa-laptop-code", color: "#FF6B6B", border: "#FF3B30", bg: "rgba(255, 59, 48, 0.15)",
+                    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+                    title: "La Méthode Alpha : Sans Risque",
+                    subtitle: "Une plateforme sur-mesure développée pour vous.",
+                    desc: "Contactez-nous pour recevoir gratuitement votre plateforme web prête à l'emploi."
+                }
+            ];
+
+            let currentSlideIndex = 0;
+            const slideContainer = document.getElementById('loadingSlideContainer');
+            const slideIcon = document.getElementById('loadingSlideIcon');
+            const slideTitle = document.getElementById('loadingSlideTitle');
+            const slideSubtitle = document.getElementById('loadingSlideSubtitle');
+            const slideDesc = document.getElementById('loadingSlideDesc');
+            const slideExtra = document.getElementById('loadingSlideExtra');
+            const bgImage = document.getElementById('loadingBgImage');
+
+            function updateSlide() {
+                const slide = slides[currentSlideIndex];
+                bgImage.style.backgroundImage = `url('${slide.image}')`;
+                slideContainer.style.borderLeftColor = slide.border;
+                slideContainer.style.background = slide.bg;
+                slideIcon.className = `fa-solid ${slide.icon}`;
+                slideIcon.style.color = slide.color;
+                slideTitle.style.color = slide.color;
+                slideTitle.innerHTML = slide.title;
+                slideSubtitle.innerHTML = slide.subtitle;
+                slideDesc.innerHTML = slide.desc;
+                if (slide.extraHtml) {
+                    slideExtra.innerHTML = slide.extraHtml;
+                    slideExtra.style.display = 'block';
+
+                    // Remplissage des champs dynamiques si on est sur la slide SEO
+                    const seoTitle = document.getElementById('seoMockupTitle');
+                    const seoLink = document.getElementById('seoMockupLink');
+                    const seoLetter = document.getElementById('seoMockupLetter');
+                    if (seoTitle) seoTitle.textContent = companyName;
+                    if (seoLink) seoLink.textContent = companyName;
+                    if (seoLetter) seoLetter.textContent = companyName.charAt(0).toUpperCase();
+                } else {
+                    slideExtra.innerHTML = '';
+                    slideExtra.style.display = 'none';
+                }
+            }
+
+            // Afficher l'écran de chargemdent
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            updateSlide(); // Initialiser la première slide
+
+            // Animation des slides avec des durées variables
+            const slideDurations = [2500, 2500, 2000]; // Durées respectives des 3 slides
+            let slideTimer;
+
+            function scheduleNextSlide() {
+                const currentDelay = slideDurations[currentSlideIndex];
+                slideTimer = setTimeout(() => {
+                    currentSlideIndex++;
+                    if (currentSlideIndex < slides.length) {
+                        // Effet de fondu
+                        slideContainer.style.opacity = '0';
+                        setTimeout(() => {
+                            updateSlide();
+                            slideContainer.style.opacity = '1';
+                        }, 400);
+
+                        // Planifier la slide suivante
+                        scheduleNextSlide();
+                    }
+                }, currentDelay);
+            }
+
+            // Démarrer le cycle
+            scheduleNextSlide();
+
+            // Redirection après le passage de toutes les slides
+            const totalDuration = slideDurations.reduce((a, b) => a + b, 0);
+            let targetUrl = `./${serviceFolder}/index.html?${params.toString()}`;
+            if (serviceFolder === 'autre') {
+                const msg = `Bonjour, je souhaite obtenir une plateforme d'acquisition sur-mesure.
+
+Informations soumises :
+- Activité : Autre / Sur-mesure
+- Nom de marque : ${companyName}
+- Pseudo de marque : ${formData.get('logo_text1') || ''}
+- Slogan/Ligne 2 : ${formData.get('logo_text2') || ''}
+- Localisation : ${formData.get('city') || ''} (${formData.get('zipcode') || ''})`;
+                targetUrl = `https://wa.me/33602706546?text=${encodeURIComponent(msg)}`;
+            }
+            setTimeout(() => {
+                clearTimeout(slideTimer);
+                window.location.href = targetUrl;
+            }, totalDuration);
+        });
+
+        // Init
+        updateProgress(1);
+
+        function selectModel(val) {
+            document.querySelector(`input[name="service_type"][value="${val}"]`).checked = true;
+            nextStep(1);
+        }
+
+        function openContactModal() {
+            const existingModal = document.getElementById('contactChoiceModal');
+            if (existingModal) existingModal.remove();
+
+            const modalOverlay = document.createElement('div');
+            modalOverlay.id = 'contactChoiceModal';
+            modalOverlay.style.cssText = `
+                position: fixed;
+                inset: 0;
+                background-color: rgba(15, 23, 42, 0.85);
+                backdrop-filter: blur(8px);
+                z-index: 10000000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                font-family: 'Inter', sans-serif;
+                padding: 20px;
+                box-sizing: border-box;
+            `;
+
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 16px;
+                padding: 28px 24px;
+                max-width: 420px;
+                width: 100%;
+                text-align: center;
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+                transform: scale(0.9);
+                transition: transform 0.3s ease;
+                box-sizing: border-box;
+            `;
+
+            modalContent.innerHTML = `
+                <div style="background: rgba(255, 107, 53, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+                    <i class="fa-solid fa-comments" style="color: #ff6b35; font-size: 26px;"></i>
+                </div>
+                <h3 style="color: white; font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; margin: 0 0 8px 0; letter-spacing: -0.5px;">Choisir un moyen de contact</h3>
+                <p style="color: rgba(255, 255, 255, 0.7); font-size: 13.5px; line-height: 1.5; margin: 0 0 24px 0;">
+                    Sélectionnez l'option de votre choix pour nous contacter directement et obtenir votre plateforme sur-mesure.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 12px; text-align: left;">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/33602706546?text=Bonjour,%20je%20souhaite%20obtenir%20une%20plateforme%20sur-mesure" target="_blank" style="display: flex; align-items: center; gap: 14px; background: rgba(37, 211, 102, 0.08); border: 1px solid rgba(37, 211, 102, 0.25); border-radius: 10px; padding: 12px 16px; color: #25D366; text-decoration: none; font-weight: 600; font-size: 14.5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(37, 211, 102, 0.15)'" onmouseout="this.style.background='rgba(37, 211, 102, 0.08)'">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i>
+                        <span>Discuter sur WhatsApp</span>
+                    </a>
+
+                    <!-- SMS -->
+                    <a href="sms:0602706546?body=Bonjour,%20je%20souhaite%20obtenir%20une%20plateforme%20sur-mesure" style="display: flex; align-items: center; gap: 14px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.25); border-radius: 10px; padding: 12px 16px; color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 14.5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(59, 130, 246, 0.15)'" onmouseout="this.style.background='rgba(59, 130, 246, 0.08)'">
+                        <i class="fa-solid fa-message" style="font-size: 18px;"></i>
+                        <span>Envoyer un SMS / Message</span>
+                    </a>
+
+                    <!-- Téléphone -->
+                    <a href="tel:0602706546" style="display: flex; align-items: center; gap: 14px; background: rgba(255, 107, 53, 0.08); border: 1px solid rgba(255, 107, 53, 0.25); border-radius: 10px; padding: 12px 16px; color: #ff6b35; text-decoration: none; font-weight: 600; font-size: 14.5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(255, 107, 53, 0.15)'" onmouseout="this.style.background='rgba(255, 107, 53, 0.08)'">
+                        <i class="fa-solid fa-phone" style="font-size: 18px;"></i>
+                        <span>Appeler directement</span>
+                    </a>
+
+                    <!-- Gmail -->
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=guizmow1031@gmail.com&su=Demande%20de%20plateforme%20sur-mesure&body=Bonjour,%20je%20souhaite%20obtenir%20une%20plateforme%20sur-mesure" target="_blank" style="display: flex; align-items: center; gap: 14px; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 10px; padding: 12px 16px; color: #10b981; text-decoration: none; font-weight: 600; font-size: 14.5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(16, 185, 129, 0.15)'" onmouseout="this.style.background='rgba(16, 185, 129, 0.08)'">
+                        <i class="fa-solid fa-envelope" style="font-size: 18px;"></i>
+                        <span>Envoyer via Gmail (Navigateur)</span>
+                    </a>
+
+                    <!-- Mailto Standard fallback -->
+                    <a href="mailto:guizmow1031@gmail.com?subject=Demande%20de%20plateforme%20sur-mesure&body=Bonjour,%20je%20souhaite%20obtenir%20une%20plateforme%20sur-mesure" style="display: flex; align-items: center; gap: 14px; background: rgba(100, 116, 139, 0.08); border: 1px solid rgba(100, 116, 139, 0.25); border-radius: 10px; padding: 12px 16px; color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 14.5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(100, 116, 139, 0.15)'" onmouseout="this.style.background='rgba(100, 116, 139, 0.08)'">
+                        <i class="fa-solid fa-paper-plane" style="font-size: 18px;"></i>
+                        <span>Autre messagerie (Outlook/Mail)</span>
+                    </a>
+                </div>
+
+                <button id="closeContactChoiceBtn" style="background: transparent; border: none; color: rgba(255, 255, 255, 0.4); margin-top: 24px; font-size: 14px; cursor: pointer; text-decoration: underline; font-weight: 500;" onmouseover="this.style.color='rgba(255, 255, 255, 0.7)'" onmouseout="this.style.color='rgba(255, 255, 255, 0.4)'">
+                    Fermer la fenêtre
+                </button>
+            `;
+
+            modalOverlay.appendChild(modalContent);
+            document.body.appendChild(modalOverlay);
+
+            // Animation d'entrée
+            setTimeout(() => {
+                modalOverlay.style.opacity = '1';
+                modalContent.style.transform = 'scale(1)';
+            }, 10);
+
+            // Fermeture
+            const closeModal = () => {
+                modalOverlay.style.opacity = '0';
+                modalContent.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    modalOverlay.remove();
+                }, 300);
+            };
+
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) closeModal();
+            });
+
+            document.getElementById('closeContactChoiceBtn').addEventListener('click', closeModal);
+        }
+
+
+
+        function showExampleDemo() {
+            // Créer l'overlay de chargement
+            const overlay = document.createElement('div');
+            overlay.id = 'exampleOverlay';
+            overlay.style.cssText = 'position:fixed;inset:0;background:#0f111a;z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;transition:opacity 0.4s;';
+            overlay.innerHTML = `
+                <div style="text-align:center;padding:30px;font-family:'Montserrat',sans-serif;">
+                    <div style="font-size:22px;font-weight:800;color:white;margin-bottom:6px;">Alpha<span style="color:#1B4DB3;">Active</span></div>
+                    <div style="width:40px;height:3px;background:linear-gradient(to right,#ff6b35,#1B4DB3);margin:0 auto 30px auto;border-radius:2px;"></div>
+                    <div id="exPercent" style="font-size:48px;font-weight:800;color:white;margin-bottom:15px;letter-spacing:-1px;">0%</div>
+                    <p style="color:#ff6b35;font-size:14px;font-weight:700;margin-bottom:10px;">Chargement de l'exemple</p>
+                    <p style="color:rgba(255,255,255,0.6);font-size:13px;line-height:1.6;max-width:300px;font-family:'Inter',sans-serif;">Préparation de la plateforme <strong style="color:white;">Ramoneur</strong> avec des informations d'exemple...</p>
+                    <div style="margin-top:25px;background:rgba(255,255,255,0.05);border-radius:8px;height:4px;width:220px;overflow:hidden;margin: 25px auto 0 auto;"><div id="exBar" style="width:0%;height:100%;background:linear-gradient(to right,#ff6b35,#1B4DB3);border-radius:8px;transition:width 0.1s linear;"></div></div>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+            requestAnimationFrame(() => { overlay.style.opacity = '1'; });
+
+            // Animer la barre de progression de manière réaliste et non-linéaire
+            const bar = document.getElementById('exBar');
+            const percentText = document.getElementById('exPercent');
+            let progress = 0;
+
+            const updateProgress = (target, speed, callback) => {
+                const interval = setInterval(() => {
+                    if (progress >= target) {
+                        clearInterval(interval);
+                        if (callback) callback();
+                    } else {
+                        progress += Math.floor(Math.random() * 3) + 1;
+                        if (progress > target) progress = target;
+                        if (bar) bar.style.width = progress + '%';
+                        if (percentText) percentText.textContent = progress + '%';
+                    }
+                }, speed);
+            };
+
+            // Étape 1 : Progression rapide à 40%
+            updateProgress(40, 20, () => {
+                // Étape 2 : Moyen à 75%
+                updateProgress(75, 45, () => {
+                    // Étape 3 : Lent à 95%
+                    updateProgress(95, 90, () => {
+                        // Reste bloqué à 95% jusqu'à la redirection finale
+                    });
+                });
+            });
+
+            // Rediriger après 3.5 secondes
+            const exampleParams = new URLSearchParams({
+                title: 'Ramonage Express',
+                logo1: 'RAMONAGE',
+                logo2: 'EXPRESS',
+                phone: '06 00 00 00 00',
+                email: 'contact@exemple-ramoneur.fr',
+                address: '15 Rue du Feu, 75001 Paris',
+                city: 'Paris'
+            });
+            setTimeout(() => {
+                progress = 100;
+                if (bar) bar.style.width = '100%';
+                if (percentText) percentText.textContent = '100%';
+                setTimeout(() => {
+                    window.location.href = './ramoneurs/index.html?' + exampleParams.toString();
+                }, 400);
+            }, 3500);
+        }
+    </script>
+</body>
+
+</html>
